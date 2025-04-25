@@ -1,0 +1,90 @@
+query getTransferInfoRequest($getTransferInfoType: GetTransferInfoType!) {
+  getTransferInfo(getTransferInfoType: $getTransferInfoType) {
+    id
+    user_info {
+      telegram
+      email
+      first_name
+      surname
+      bank
+      card_number
+      crypto_wallet
+      accept_aml
+    }
+    logs {
+      id
+      log
+      created_at
+      transfer_id
+      Transfer {
+        id
+        user_info {
+          telegram
+          email
+          first_name
+          surname
+          bank
+          card_number
+          crypto_wallet
+          accept_aml
+        }
+        in {
+          coin
+          amount
+          id
+          type
+        }
+        out {
+          coin
+          amount
+          id
+          type
+        }
+        calculated_currency {
+          id
+          created_at
+          calculated_value
+          config {
+            id
+            created_at
+            currency_percent
+            statement_lifetime
+          }
+          config_id
+          lifetime
+          transfer {
+            id
+            status
+            reciever_crypto_adress
+            reciever_fiat_url
+          }
+          in_course {
+            id
+            quotes
+            constant {
+              name
+              symbol
+              slug
+              id
+              exchange_min
+              exchange_max
+              coin_cdn_url
+              type
+              created_at
+              network
+            }
+            isAvailable
+            currentAmount
+            created_at
+          }
+          in_course_id
+        }
+        status
+        reciever_crypto_adress
+        reciever_fiat_url
+      }
+    }
+    reciever_crypto_adress
+    reciever_fiat_url
+  }
+}

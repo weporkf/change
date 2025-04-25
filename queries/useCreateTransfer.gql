@@ -1,0 +1,7 @@
+mutation useCreateTransfer($createTransferInput: CreateTransferInput!) {
+  createTransfer(createTransferInput: $createTransferInput) {
+    transfer {
+      id
+    }
+  }
+}

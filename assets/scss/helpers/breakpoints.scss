@@ -1,0 +1,43 @@
+.el-select__wrapper {
+  height: 50px;
+}
+
+@media screen and (min-width: 2560px) {
+  .el-select__wrapper {
+    height: 100px;
+  }
+  .el-select__placeholder {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .el-select__wrapper {
+    height: 40px;
+  }
+  .el-select__placeholder {
+    font-size: 12px;
+  }
+}
+.el-input__inner {
+  font-size: 30px;
+  @media screen and (min-width: 2560px) {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .el-input.is-disabled .el-input__inner {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .el-select__wrapper {
+    height: 30px;
+    width: 100%;
+  }
+  .el-select__placeholder {
+    font-size: 12px;
+  }
+}

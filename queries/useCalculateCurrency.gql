@@ -1,0 +1,20 @@
+mutation useCalculateCurrency(
+  $calculateCurrencyInput: CaclulateCurrencyInput!
+) {
+  calculateCurrency(calculateCurrencyInput: $calculateCurrencyInput) {
+    in {
+      ...CoinInAndOutTypeFields
+    }
+    out {
+      ...CoinInAndOutTypeFields
+    }
+    fixedCalcId
+  }
+}
+
+fragment CoinInAndOutTypeFields on CoinInAndOutType {
+  coin
+  amount
+  id
+  type
+}

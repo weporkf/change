@@ -1,0 +1,22 @@
+query getCurrenciesRequest {
+  getCurrencies {
+    currencies {
+      id
+      quotes
+      constant {
+        name
+        symbol
+        slug
+        id
+        exchange_min
+        exchange_max
+        coin_cdn_url
+        type
+        created_at
+      }
+      isAvailable
+      currentAmount
+      created_at
+    }
+  }
+}
